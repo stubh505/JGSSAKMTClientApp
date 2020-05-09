@@ -6,10 +6,53 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="no_content">Nothing to show</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_blogs">Blogs</string>
+    <string name="menu_events">Events</string>
+    <string name="menu_contact">Contact Us</string>
 
     <string name="home_second">Home Second</string>
+
+    <!-- Blog Page Strings-->
+    <string name="blog_icon">Blog Icon</string>
+    <string name="blog_excerpt">Blog Excerpt</string>
+    <string name="blog_title">Blog Title</string>
+
+    <!-- View Blog Strings-->
+    <string name="view_blog_title">View Blog Title</string>
+    <string name="view_blog_image">View Blog Image</string>
+    <string name="view_blog_posted">View Blog Posted</string>
+    <string name="view_blog_edited">View Blog Edited</string>
+    <string name="view_blog_content">View Blog Content</string>
+
+    <!-- Event Page Strings-->
+    <string name="event_icon">Event Icon</string>
+    <string name="event_title">Event Title</string>
+    <string name="event_start">Event Start</string>
+    <string name="event_end">Event End</string>
+    <string name="event_excerpt">Event Excerpt</string>
+
+    <!-- View Event Strings-->
+    <string name="view_event_title">View Event Title</string>
+    <string name="view_event_image">View Event Image</string>
+    <string name="view_event_posted">View Event Posted</string>
+    <string name="view_event_edited">View Event Edited</string>
+    <string name="view_event_content">View Event Content</string>
+
+    <!-- Page Strings-->
+    <string name="page_title">Page Header</string>
+    <string name="page_excerpt">Page Excerpt</string>
+
+    <!-- View Page Strings-->
+    <string name="view_page_header">View Page Header</string>
+    <string name="view_page_name">View Page Name</string>
+    <string name="posted_edited">Posted/Edited</string>
+    <string name="view_page_para">View Page Paragraph Header</string>
+    <string name="view_page_body">View Page Paragraph body</string>
+    <string name="view_page_image">View Page Paragraph Image</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -3,41 +3,94 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/homeFragment">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/homeFragment"
         android:name="com.joythakur.jgssakmtapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_home_second" />
-    </fragment>
-    <fragment
-        android:id="@+id/nav_home_second"
-        android:name="com.joythakur.jgssakmtapp.ui.home.HomeSecondFragment"
-        android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
+            android:id="@+id/action_nav_home_to_blogFragment"
+            app:destination="@id/blogFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
         <action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
-
+            android:id="@+id/action_nav_home_to_eventFragment"
+            app:destination="@id/eventFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_viewBlogFragment"
+            app:destination="@id/viewBlogFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_viewEventFragment"
+            app:destination="@id/viewEventFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_contactFragment2"
+            app:destination="@id/contactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.joythakur.jgssakmtapp.BlogFragment"
+        android:label="blog_fragment"
+        tools:layout="@layout/blog_fragment" >
+        <action
+            android:id="@+id/action_blogFragment_to_viewBlogFragment"
+            app:destination="@id/viewBlogFragment" />
+        <action
+            android:id="@+id/action_blogFragment_to_nav_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.joythakur.jgssakmtapp.EventFragment"
+        android:label="event_fragment"
+        tools:layout="@layout/event_fragment" >
+        <action
+            android:id="@+id/action_eventFragment_to_viewEventFragment"
+            app:destination="@id/viewEventFragment" />
+        <action
+            android:id="@+id/action_eventFragment_to_nav_home"
+            app:destination="@id/homeFragment" />
         <argument
-            android:name="myArg"
-            app:argType="string" />
+            android:name="eventGroup"
+            app:argType="string"
+            android:defaultValue="all" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBlogFragment"
+        android:name="com.joythakur.jgssakmtapp.ViewBlogFragment"
+        android:label="view_blog_fragment"
+        tools:layout="@layout/view_blog_fragment" >
+        <argument
+            android:name="blogId"
+            app:argType="integer"
+            android:defaultValue="1001" />
+        <action
+            android:id="@+id/action_viewBlogFragment_to_blogFragment"
+            app:destination="@id/blogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewEventFragment"
+        android:name="com.joythakur.jgssakmtapp.ViewEventFragment"
+        android:label="view_event_fragment"
+        tools:layout="@layout/view_event_fragment" >
+        <action
+            android:id="@+id/action_viewEventFragment_to_eventFragment"
+            app:destination="@id/eventFragment" />
+        <argument
+            android:name="eventId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.joythakur.jgssakmtapp.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.joythakur.jgssakmtapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.joythakur.jgssakmtapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 </navigation>
