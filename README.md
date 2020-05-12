@@ -8,4 +8,6 @@
 
 > Allows Users to contact the NGO using the dedicated Contact Us Page.
 
+- Uses the rest endpoints of <a href="https://github.com/stubh505/JGSSAKMTbackend" target="_blank">JGSSAKMT backend</a> to view the contents of the website.
+
 - Work in Progress
